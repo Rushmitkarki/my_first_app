@@ -32,7 +32,6 @@ class _AreaCircleScreenState extends State<AreaCircleScreen> {
           centerTitle: true,
           elevation: 0,
         ),
-        backgroundColor: Colors.pink,
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Form(
@@ -45,7 +44,17 @@ class _AreaCircleScreenState extends State<AreaCircleScreen> {
                   },
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.green),
+                    ),
                     labelText: "Radius",
                   ),
                   validator: (value) {
