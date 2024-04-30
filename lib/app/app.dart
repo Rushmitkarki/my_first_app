@@ -1,6 +1,5 @@
+import 'package:first_app/screen/flexibal_expanded_screen.dart';
 import 'package:flutter/material.dart';
-
-import '../screen/list_tile_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,7 +7,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ListTileScreen(),
+      home: FlexibaleExpandedScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
