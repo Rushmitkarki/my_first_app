@@ -21,7 +21,17 @@ class FlexibaleExpandedScreen extends StatelessWidget {
                   color: Colors.amber,
                 ),
                 child: Center(
-                  child: MyButton(onPressed: () {}, text: 'button 1'),
+                  child: MyButton(
+                      onPressed: () {
+                        ScaffoldMessenger.of(context)
+                            .showSnackBar(const SnackBar(
+                          backgroundColor: Colors.green,
+                          content: Text('Button 1'),
+                          duration: Duration(seconds: 1),
+                          behavior: SnackBarBehavior.floating,
+                        ));
+                      },
+                      text: 'button 1'),
                 ),
               ),
             ),
@@ -32,7 +42,17 @@ class FlexibaleExpandedScreen extends StatelessWidget {
                   color: Colors.blue,
                 ),
                 child: Center(
-                  child: MyButton(onPressed: () {}, text: 'button 2'),
+                  child: MyButton(
+                      onPressed: () {
+                        ScaffoldMessenger.of(context)
+                            .showSnackBar(const SnackBar(
+                          backgroundColor: Colors.green,
+                          content: Text('Button 2'),
+                          duration: Duration(seconds: 1),
+                          behavior: SnackBarBehavior.floating,
+                        ));
+                      },
+                      text: 'button 2'),
                 ),
               ),
             )
